@@ -1,4 +1,4 @@
-# Taika
+# Taika (大火)
 
 A Clojure wrapper around the Firebase REST API.
 
@@ -44,6 +44,13 @@ The user-auth-token is optional, and only needed if your security rules require 
 ```clojure
      (taika/update! "db-name" "/customers" {10 {:name "Samuel Hayes" :area "SF"}} user-auth-token)
      ; => {"10" {"name" "Samuel Hayes" :area "SF"}} 
+```
+
+ Push to a list (see ["Lists of Data"](https://www.firebase.com/docs/managing-lists.html):
+ 
+```clojure
+     (taika/push! "db-name" "/example-lists" {:firebase true} user-auth-token)
+     ; => {"name" "-IoZ3DZlTTQIkR0c7iVK"}
 ```
      
  Destructively update (replace) an entry:
