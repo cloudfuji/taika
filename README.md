@@ -11,17 +11,18 @@ Taika tries to stay close to the wording used in the [Firebase REST Documentatio
 Add Taika to you project
 
 ```clojure
-    (require '[com.zenboxapp/taika :as taika])
+    (require '[taika.core :as taika]
+             '[taika.auth :as taika-auth])
 ```
 
 Create a token generator and an auth token:
 
 ```clojure
     (def user-auth-token
-      (let [token-generator (taika/token-generator "SECRET-KEY")
+      (let [token-generator (taika-auth/token-generator "SECRET-KEY")
             auth-data {:username "taika" :team_id 100}
             admin? false]
-        (taika/create-token token-generator auth-data admin?)))
+        (taika-auth/create-token token-generator auth-data admin?)))
 ```
 See the [Custom Token Generation](https://www.firebase.com/docs/security/custom-login.html) to read more about the token structure, and the [Security Auth Variable](https://www.firebase.com/docs/security/rule-expressions/auth.html) page to understand what to put in the auth-data map for Firebase's [Security Rules](https://www.firebase.com/docs/security/security-rules.html).
 
