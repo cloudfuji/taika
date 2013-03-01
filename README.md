@@ -35,7 +35,7 @@ The user-auth-token is optional, and only needed if your security rules require 
 
 ```clojure
     (taika/read "db-name" "/customers/10")
-    ; {"name" "Samuel Calans"}
+    ; => {"name" "Samuel Calans"}
 ```
  
  Update (merge) a given entry:
