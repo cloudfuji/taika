@@ -23,6 +23,7 @@ Create a token generator and an auth token:
             admin? false]
         (taika/create-token token-generator auth-data admin?)))
 ```
+See the [Custom Token Generation](https://www.firebase.com/docs/security/custom-login.html) to read more about the token structure, and the [Security Auth Variable](https://www.firebase.com/docs/security/rule-expressions/auth.html) page to understand what to put in the auth-data map for Firebase's [Security Rules](https://www.firebase.com/docs/security/security-rules.html).
 
 Create a new entry in the Firebase database (note we're using 10 as the customer's id/handle here):
 
