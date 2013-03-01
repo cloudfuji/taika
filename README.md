@@ -70,8 +70,8 @@ Finally, you can update the security rules from Taika as well. Given a Clojure m
 
 ## TODO
 
-Use `clj-http`'s connection pooling to speed up serial requests. Right now it's not too slow, but could be faster.
-Write tests - not sure how to approach this for a purely 3rd-party wrapper. Any suggestions/pull-requests readily welcome.
+* Use `clj-http`'s connection pooling to speed up serial requests. Right now it's not too slow, but could be faster.
+* Write tests - not sure how to approach this for a purely 3rd-party wrapper. Any suggestions/pull-requests readily welcome.
 
 ## License
 
