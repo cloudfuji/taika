@@ -10,7 +10,6 @@
 
 (defn create-token [token-generator auth-data & [admin?]]
   (let [token-options (doto (com.firebase.security.token.TokenOptions.)
-                        (.setAdmin (or admin? false)))]
-    (.createToken token-generator (org.json.JSONObject. auth-data) token-options)))
-
-
+                        (.setAdmin (or admin? false)))
+        auth-json (org.json.JSONObject. (java.util.HashMap. auth-data))]
+    (.createToken token-generator auth-json token-options)))
