@@ -1,4 +1,4 @@
-(defproject com.zenboxapp/taika "0.1.0-SNAPSHOT"
+(defproject com.zenboxapp/taika "0.1.1"
   :description "A wrapper around the Firebase REST API"
   :url "http://www.github.com/cloudfuji/taika"
   :license {:name "Eclipse Public License"
