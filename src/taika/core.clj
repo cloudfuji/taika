@@ -2,7 +2,8 @@
   (:require [clojure.string :as string]
             [clj-http.client :as client]
             [cheshire.core :as json]
-            [taika.auth :as auth]))
+            [taika.auth :as auth])
+  (:refer-clojure :exclude [read])))
 
 (defn recursive-merge
   "Recursively merge hash maps."
