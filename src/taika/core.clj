@@ -3,7 +3,7 @@
             [clj-http.client :as client]
             [cheshire.core :as json]
             [taika.auth :as auth])
-  (:refer-clojure :exclude [read])))
+  (:refer-clojure :exclude [read]))
 
 (defn recursive-merge
   "Recursively merge hash maps."
@@ -31,7 +31,7 @@
         url (db-url db-name path)]
     (-> (method url request-options {:as :json})
         :body
-        json/decode)))
+        json/parse-string)))
 
 (defn write! [db-name path data & [auth options]]
   "Creates or destructively replaces data in a Firebase database at a given path"
