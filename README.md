@@ -4,6 +4,9 @@ A Clojure wrapper around the Firebase REST API.
 
 **Note that this is not a Firebase client in Clojure, it's just the REST API**
 
+## Installation
+[![Clojars Project](http://clojars.org/com.zenboxapp/taika/latest-version.svg)](http://clojars.org/com.zenboxapp/taika)
+
 ## Usage
 
 Taika tries to stay close to the wording used in the [Firebase REST Documentation](https://www.firebase.com/docs/rest-api.html). Make sure that either 1.) you've read the security documentation and have configured things appropriately, or 2.) have read/write access turned on for everything while testing. Security will likely be the biggest pain while getting started.
